@@ -1,4 +1,4 @@
-import {stringInclues} from '../util/common';
+import { stringInclues } from '../util/common';
 
 export const FILTER_ALL = 'all';
 export const FILTER_ACTIVE = 'active';
@@ -20,14 +20,18 @@ export function applyFilter(list, filter) {
 export function search(list, query) {
     let q = query.trim().toLowerCase();
 
-    return list.filter(({text}) => stringInclues(text.toLowerCase(), q));
+    return list.filter(({ text }) => stringInclues(text.toLowerCase(), q));
 }
 
+export function sortByDateAscending(list) {
+    return list.slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+}
 
 export function getOptions() {
     return {
         [FILTER_ALL]: 'All',
         [FILTER_ACTIVE]: 'Active',
-        [FILTER_COMPLETED]: 'Completed'
+        [FILTER_COMPLETED]: 'Completed',
+        sortByDate: 'Sort by '
     };
 }
