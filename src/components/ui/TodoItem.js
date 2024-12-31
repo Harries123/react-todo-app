@@ -20,7 +20,7 @@ export default class TodoItem extends React.Component {
     const { changeStatus, data } = this.props;
     const { tempChecked, tempDueDate, tempPriority } = this.state;
 
-    changeStatus(data.id, tempChecked, tempDueDate, tempPriority); // Pass due date to the parent component
+    changeStatus(data.id, tempChecked, tempDueDate, tempPriority); 
     this.setState({ showDialog: false });
   };
 

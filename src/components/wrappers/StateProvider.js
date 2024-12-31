@@ -16,7 +16,7 @@ class StateProvider extends Component {
   }
 
   render() {
-    // Wrap children with data and actions
+   
     let children = wrapChildrenWith(this.props.children, {
       data: this.state,
       actions: objectWithOnly(this, [

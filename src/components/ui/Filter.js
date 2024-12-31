@@ -1,5 +1,5 @@
 import React from 'react';
-import { getOptions } from '../../services/filter'; // Adjust the path if necessary
+import { getOptions } from '../../services/filter'; 
 
 export default function Filter(props) {
   const { filter, changeFilter, sortListByDueDate, sortListByPriority } = props;
